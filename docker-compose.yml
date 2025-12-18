@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  kamailio:
+    build:
+      context: .
+      dockerfile: Dockerfile.runtime
+    image: kamailio:runtime
+    platform: linux/amd64
+    container_name: kamailio-server
+    restart: unless-stopped
+    ports:
+      - "5060:5060/udp"
+      - "5060:5060/tcp"
+      - "5061:5061/tcp"
+    volumes:
+      - ./config/kamailio.cfg:/kamailio/etc/kamailio/kamailio.cfg:rw
+      - kamailio-logs:/var/log/kamailio
+      - kamailio-run:/var/run/kamailio
+    networks:
+      - kamailio-net
+
+volumes:
+  kamailio-logs:
+  kamailio-run:
+
+networks:
+  kamailio-net:
+    driver: bridge
