@@ -1,0 +1,25 @@
+# Compiled binaries
+compiled/
+
+# Logs
+*.log
+
+# Kamailio source (downloaded during build)
+kamailio/
+
+# Configuration (might contain sensitive data)
+config/*.cfg
+config/kamctlrc
+
+# Keep config directory structure
+!config/.gitkeep
+
+# Docker volumes
+volumes/
+
+# Temporary files
+*.tmp
+*.swp
+*~
+.DS_Store
+
