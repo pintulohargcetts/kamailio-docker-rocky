@@ -2,7 +2,7 @@
 1. first we usually write logs to rsyslog . 
 2. through rsyslog , we will get the timestamps of logs , In general we use rsyslog timestamp instead of kamailio $Ts timestamp..
 3. So Lets copy rsyslog-kamailio.conf to /etc/rsyslog.d/rsyslog-kamailio.conf 
-4. then we systemctl restart rsyslog.d, Now we will see timestamp in the specific format of rsyslog config. 
+4. then we do 'systemctl restart rsyslogd', Now we will see timestamp in the specific format of rsyslog config. 
 
 5. Now we can apply rotation on rsyslog 
 6. copy kamailio-logrotate.conf to /etc/logrotate.d/kamailio-logrotate.conf
