@@ -11,9 +11,10 @@
 
 8. Now lets do it automatically through cron jobs 
 9. Copy hourly-cron.conf to /etc/cron.hourly/logrotate
-    cp /etc/cron.daily/logrotate /etc/cron.hourly/logrotate
-    chmod +x /etc/cron.hourly/logrotate
+10. OR cp /etc/cron.daily/logrotate /etc/cron.hourly/logrotate
+    
+11. chmod +x /etc/cron.hourly/logrotate
 
 
-10. systemctl enable crond # if not enabled.
-11. systemctl restart crond
+12. systemctl enable crond # if not enabled.
+13. systemctl restart crond
