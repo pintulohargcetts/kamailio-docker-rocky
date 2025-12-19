@@ -9,7 +9,7 @@
 7. Now we can apply rotation on rsyslog 
 8. copy kamailio-logrotate.conf to /etc/logrotate.d/kamailio-logrotate.conf
 9. now to test you can execute below / its a kind of force rotation for testing..
--> logrotate -d /etc/logrotate.d/kamailio-logrotate.conf
+-> logrotate -vf /etc/logrotate.d/kamailio-logrotate.conf
 
 10. Now lets do it automatically through cron jobs 
 11. Copy hourly-cron.conf to /etc/cron.hourly/logrotate
